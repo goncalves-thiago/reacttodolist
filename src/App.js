@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import TodoList from './components/TodoList';
 import './App.css';
 
 function App() {
+
+  const arrayTasks = [
+    {
+        user: 'Thiago Goncalves',
+        avatarUrl: 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp',
+        priority: 'High',
+        task: 'Update server firmwares'
+    },
+    {
+        user: 'Marie Horwitz',
+        avatarUrl: 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp',
+        priority: 'Medium',
+        task: 'Test new application'
+    },
+    {
+        user: 'Alexa Chung',
+        avatarUrl: 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp',
+        priority: 'Low',
+        task: 'Update new application documentation'
+    },
+    {
+        user: 'Graziele Vargas',
+        avatarUrl: 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp',
+        priority: 'High',
+        task: 'Run backup routines'
+    },
+]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoList tasks={arrayTasks}/>
   );
 }
 
